@@ -6,6 +6,7 @@ public class Battle_Manager : MonoBehaviour
 {
     //Correct Type, Enemy Weakness
     //Default enemy selalu weak untuk potent
+    public List<EnemyDataSO> listData;
     public EnemyDataSO enemyData;
     //Mengacu ke inventory equipped player
     public RuneInventory runeInvent;
@@ -14,16 +15,22 @@ public class Battle_Manager : MonoBehaviour
     public Bar enemyHealthBar;
     //TODO:Enemy damage
     public Animator anim;
+    int indeksEnemy;
 
     private void Start()
     {
+        Debug.Log("Total enemy:" + listData.Count);
+        indeksEnemy = 0;
+        enemyData = listData[0];
         initStage();
     }
 
     public void initStage()
     {
+        Debug.Log(indeksEnemy + " Masuk sini");
         enemyHealthBar.maxBar = enemyData.health;
         enemyHealthBar.currentBar = enemyData.health;
+        anim.Play("Slime");
     }
 
     //Fungsi dipanggil saat button pressed
@@ -33,7 +40,18 @@ public class Battle_Manager : MonoBehaviour
         enemyHealthBar.reduceBar(-1 * damage);
         if (enemyHealthBar.currentBar == 0)
         {
-            anim.Play("Slime_Dead");
+            //Akses elemen enemy selanjutnya
+            if(indeksEnemy != listData.Count-1)
+            {
+                indeksEnemy++;
+                enemyData = listData[indeksEnemy];
+                initStage();
+            }
+            else
+            {
+                anim.Play("Slime_Dead");
+                Debug.Log("Menang!!");
+            }
             Debug.Log("Duar musuh mati!");
         }
         //TODO: Damage to player sesuai damage enemy
