@@ -1,0 +1,7 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <uie:Toolbar style="padding-left: 18px; margin-left: -15px; background-image: none; margin-right: -7px;">
+        <ui:Foldout text="Fade In" name="MenuFoldout" style="-unity-font-style: bold;" />
+        <uie:ToolbarButton display-tooltip-when-elided="True" name="DeleteButton" style="width: 22px; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; position: absolute; left: auto; right: 6px; height: 20px;" />
+    </uie:Toolbar>
+    <ui:VisualElement name="PropertyContainer" style="padding-bottom: 18px; margin-top: 1px; overflow: hidden; visibility: visible; display: flex; opacity: 1;" />
+</ui:UXML>
