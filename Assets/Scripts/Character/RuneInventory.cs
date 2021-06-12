@@ -39,8 +39,6 @@ public class RuneInventory : MonoBehaviour
         // Find rune in runes list
         if (!runesList.Find(e => e == rune))
         {
-            // TODO: Find rune in selected list?
-
             return false;
         }
 
@@ -60,9 +58,14 @@ public class RuneInventory : MonoBehaviour
             if (elementRune1)
             {
                 if (elementRune2) return false;
+                if (elementRune1 == rune) return false;
                 elementRune2 = rune as ElementalRuneSO;
             }
-            else elementRune1 = rune as ElementalRuneSO;
+            else
+            {
+                if (elementRune2 == rune) return false;
+                elementRune1 = rune as ElementalRuneSO;
+            }
         }
 
         UpdateInventory();

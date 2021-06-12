@@ -11,7 +11,7 @@ public class Bar : MonoBehaviour
     public Image fill; //Mengambil gambar "fill" dari unity
     public int currentBar;  //Besar nilai health 
     public int startingBar; //Start health
-    public int maxBar = 100; //Nilai maksimum health
+    public int maxBar; //Nilai maksimum health
 
     //Set nilai maksimum pada slider
     public void SetMaxBar(int bar)
@@ -50,7 +50,7 @@ public class Bar : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SetMaxBar(100);
+        SetMaxBar(maxBar);
         currentBar = startingBar;
     }
 

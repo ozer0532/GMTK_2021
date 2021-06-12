@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runeName: Dull
   sprite: {fileID: 21300000, guid: add2887a545a2c647aac5613f8cf80a7, type: 3}
-  manaCost: 0
+  manaCost: 10
