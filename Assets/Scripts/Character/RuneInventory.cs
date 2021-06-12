@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class RuneInventory : MonoBehaviour
 {
@@ -13,6 +14,20 @@ public class RuneInventory : MonoBehaviour
     public List<RuneBaseSO> runesList = new List<RuneBaseSO>();
 
     public List<ElementalRuneSO> elementsList = new List<ElementalRuneSO>();
+
+    public UnityAction onEquipmentChanged;
+    public UnityAction onInventoryChanged;
+
+    private void OnEnable()
+    {
+        UpdateInventory();
+    }
+
+    public void UpdateInventory()
+    {
+        if (onEquipmentChanged != null) onEquipmentChanged();
+        if (onInventoryChanged != null) onInventoryChanged();
+    }
 
     /// <summary>
     /// Equips a rune in the inventory into an empty slot
@@ -50,6 +65,7 @@ public class RuneInventory : MonoBehaviour
             else elementRune1 = rune as ElementalRuneSO;
         }
 
+        UpdateInventory();
         return true;
     }
 

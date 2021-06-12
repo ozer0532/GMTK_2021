@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Potent Rune
   m_EditorClassIdentifier: 
   runeName: Potent
+  sprite: {fileID: 21300000, guid: fc8fa61deb41ba34687e15548eccd935, type: 3}
   manaCost: 0

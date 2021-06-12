@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Orb Rune
   m_EditorClassIdentifier: 
   runeName: Orb
+  sprite: {fileID: 21300000, guid: caacb50dcb35b8c44a4e4317189baf8a, type: 3}

@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Plant Rune
   m_EditorClassIdentifier: 
   runeName: Phyto
+  sprite: {fileID: 21300000, guid: 7ba5b312b12582d4f816efd4e8e363c8, type: 3}
   isBaseElement: 1
   baseElement1: {fileID: 0}
   baseElement2: {fileID: 0}

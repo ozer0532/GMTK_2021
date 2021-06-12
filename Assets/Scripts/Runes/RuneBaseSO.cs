@@ -5,4 +5,5 @@ using UnityEngine;
 public class RuneBaseSO : ScriptableObject
 {
     public string runeName;
+    public Sprite sprite;
 }
