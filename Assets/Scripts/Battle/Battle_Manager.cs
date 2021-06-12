@@ -6,15 +6,24 @@ public class Battle_Manager : MonoBehaviour
 {
     //Correct Type, Enemy Weakness
     //Default enemy selalu weak untuk potent
-    public PowerRuneSO enemyPowerRune;
-    public ElementalRuneSO enemyElementRune;
-    public TypeRuneSO enemyTypeRune;
+    public EnemyDataSO enemyData;
     //Mengacu ke inventory equipped player
     public RuneInventory runeInvent;
     public Bar healthBar;
     public Bar manaBar;
     public Bar enemyHealthBar;
     //TODO:Enemy damage
+
+    private void Start()
+    {
+        initStage();
+    }
+
+    public void initStage()
+    {
+        enemyHealthBar.maxBar = enemyData.health;
+        enemyHealthBar.currentBar = enemyData.health;
+    }
 
     //Fungsi dipanggil saat button pressed
     public void whenClicked()
@@ -23,7 +32,7 @@ public class Battle_Manager : MonoBehaviour
         enemyHealthBar.reduceBar(-1 * damage);
         //TODO: Check death
         //TODO: Damage to player
-        healthBar.reduceBar(-1 * 10);
+        healthBar.reduceBar(-1 * enemyData.damage);
     }
 
     //Return integer damage 0 no damage, 1 ok damage, 2 full damage with potent rune
@@ -34,7 +43,7 @@ public class Battle_Manager : MonoBehaviour
         if (currentPlayerElement != null)
         {
             //Hit
-            if (runeInvent.GetTypeRune() == enemyTypeRune && currentPlayerElement == enemyElementRune)
+            if (runeInvent.GetTypeRune() == enemyData.enemyTypeRune && currentPlayerElement == enemyData.enemyElementRune)
             {
                 //Change weakness
                 //TODO: Change Weakness sesuai kombinasi di scriptable object enemy type dan enemy
@@ -52,7 +61,7 @@ public class Battle_Manager : MonoBehaviour
                 }
 
                 //Formula damage
-                if (runeInvent.powerRune == enemyPowerRune)
+                if (runeInvent.powerRune == enemyData.enemyPowerRune)
                 {
                     return (2);
                 }
