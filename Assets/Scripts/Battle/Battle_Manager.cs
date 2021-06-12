@@ -11,16 +11,20 @@ public class Battle_Manager : MonoBehaviour
     public TypeRuneSO enemyTypeRune;
     //Mengacu ke inventory equipped player
     public RuneInventory runeInvent;
+    public Bar healthBar;
     public Bar manaBar;
     public Bar enemyHealthBar;
+    //TODO:Enemy damage
 
     //Fungsi dipanggil saat button pressed
     public void whenClicked()
     {
         int damage = compareTo();
         enemyHealthBar.reduceBar(-1 * damage);
+        //TODO: Check death
+        //TODO: Damage to player
+        healthBar.reduceBar(-1 * 10);
     }
-
 
     //Return integer damage 0 no damage, 1 ok damage, 2 full damage with potent rune
     public int compareTo()
