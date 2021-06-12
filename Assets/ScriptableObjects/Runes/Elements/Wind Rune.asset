@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d97e14f41963db45acc1d7939b70088, type: 3}
+  m_Name: Wind Rune
+  m_EditorClassIdentifier: 
+  runeName: Anemo
+  isBaseElement: 0
+  baseElement1: {fileID: 11400000, guid: 21e77a68cc029384fbe36e6f80d9e531, type: 2}
+  baseElement2: {fileID: 11400000, guid: 68abc3ba0b56f1b429273f6974c66b76, type: 2}
+  effective:
+  - {fileID: 11400000, guid: e658013c80f0c3648a16fb731133fc92, type: 2}
+  ineffective:
+  - {fileID: 11400000, guid: 61790ad3cca476840bf427be0b076267, type: 2}

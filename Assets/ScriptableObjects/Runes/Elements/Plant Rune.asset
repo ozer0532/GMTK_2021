@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d97e14f41963db45acc1d7939b70088, type: 3}
+  m_Name: Plant Rune
+  m_EditorClassIdentifier: 
+  runeName: Phyto
+  isBaseElement: 1
+  baseElement1: {fileID: 0}
+  baseElement2: {fileID: 0}
+  effective:
+  - {fileID: 11400000, guid: 71d4026e9d1c21f45839cad986286341, type: 2}
+  ineffective:
+  - {fileID: 11400000, guid: 68abc3ba0b56f1b429273f6974c66b76, type: 2}
