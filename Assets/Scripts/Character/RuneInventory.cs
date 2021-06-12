@@ -18,6 +18,9 @@ public class RuneInventory : MonoBehaviour
     public UnityAction onEquipmentChanged;
     public UnityAction onInventoryChanged;
 
+    //Cast Button
+    public UnityEngine.UI.Button castButton;
+
     private void OnEnable()
     {
         UpdateInventory();
@@ -108,4 +111,17 @@ public class RuneInventory : MonoBehaviour
     public TypeRuneSO GetTypeRune() => typeRune;
     public PowerRuneSO GetPowerRune() => powerRune;
     public ElementalRuneSO GetElementalRune() => GetElementCombination(elementRune1, elementRune2);
+
+    //Enable button jika element sudah ada
+    private void Update()
+    {
+        if(GetElementalRune()!=null)
+        {
+            castButton.interactable = true;
+        }
+        else
+        {
+            castButton.interactable = false;
+        }
+    }
 }
