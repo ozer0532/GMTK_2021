@@ -16,6 +16,7 @@ public class Battle_Manager : MonoBehaviour
     //TODO:Enemy damage
     public Animator anim;
     int indeksEnemy;
+    int indeksWeakness;
 
     private void Start()
     {
@@ -30,6 +31,10 @@ public class Battle_Manager : MonoBehaviour
         Debug.Log(indeksEnemy + " Masuk sini");
         enemyHealthBar.maxBar = enemyData.health;
         enemyHealthBar.currentBar = enemyData.health;
+        indeksWeakness = Random.Range(0, enemyData.weaknessList.Count);
+        EnemyWeakness currentWeakness = enemyData.weaknessList[indeksWeakness];
+        enemyData.enemyTypeRune = currentWeakness.enemyTypeRune;
+        enemyData.enemyElementRune = currentWeakness.enemyElementRune;
         anim.Play("Slime");
     }
 
@@ -49,9 +54,9 @@ public class Battle_Manager : MonoBehaviour
             }
             else
             {
-                anim.Play("Slime_Dead");
                 Debug.Log("Menang!!");
             }
+            anim.Play("Slime_Dead");
             Debug.Log("Duar musuh mati!");
         }
         //TODO: Damage to player sesuai damage enemy
@@ -69,11 +74,17 @@ public class Battle_Manager : MonoBehaviour
         ElementalRuneSO currentPlayerElement = runeInvent.GetElementalRune();
         if (currentPlayerElement != null)
         {
+            //Debug.Log("Weakness:" + enemyData.enemyTypeRune + enemyData.enemyElementRune);
+
             //Hit
             if (runeInvent.GetTypeRune() == enemyData.enemyTypeRune && currentPlayerElement == enemyData.enemyElementRune)
             {
                 //Change weakness
-                //TODO: Change Weakness sesuai kombinasi di scriptable object enemy type dan enemy
+                indeksWeakness = Random.Range(0,enemyData.weaknessList.Count);
+                EnemyWeakness currentWeakness = enemyData.weaknessList[indeksWeakness];
+                enemyData.enemyTypeRune = currentWeakness.enemyTypeRune;
+                enemyData.enemyElementRune = currentWeakness.enemyElementRune;
+                Debug.Log("Ganti weakness menjadi" + enemyData.enemyTypeRune + enemyData.enemyElementRune);
 
                 //Change player mana
                 //Mana if dull minus 5, if potent minus 20
