@@ -306,7 +306,7 @@ GameObject:
   - component: {fileID: 148537217}
   - component: {fileID: 148537216}
   m_Layer: 0
-  m_Name: sprite_slime_idle_1
+  m_Name: Enemy Slime
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2019,9 +2019,10 @@ MonoBehaviour:
   enemyElementRune: {fileID: 11400000, guid: 68abc3ba0b56f1b429273f6974c66b76, type: 2}
   enemyTypeRune: {fileID: 0}
   runeInvent: {fileID: 1762069235}
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 791995922}
   manaBar: {fileID: 1295528986}
   enemyHealthBar: {fileID: 1612338993}
+  anim: {fileID: 148537216}
 --- !u!1 &1208441965
 GameObject:
   m_ObjectHideFlags: 0
@@ -2240,8 +2241,8 @@ MonoBehaviour:
   slider: {fileID: 1295528987}
   gradient:
     serializedVersion: 2
-    key0: {r: 0.03137252, g: 0.2731811, b: 0.9607843, a: 0.654902}
-    key1: {r: 0.20000002, g: 0.40784317, b: 0.5764706, a: 0.60784316}
+    key0: {r: 0.37647063, g: 0.6392157, b: 0.7607844, a: 1}
+    key1: {r: 0.25490198, g: 0.4784314, b: 0.654902, a: 1}
     key2: {r: 0, g: 0, b: 0, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
@@ -2249,14 +2250,14 @@ MonoBehaviour:
     key6: {r: 0, g: 0, b: 0, a: 0}
     key7: {r: 0, g: 0, b: 0, a: 0}
     ctime0: 0
-    ctime1: 65535
+    ctime1: 64957
     ctime2: 0
     ctime3: 0
     ctime4: 0
     ctime5: 0
     ctime6: 0
     ctime7: 0
-    atime0: 0
+    atime0: 578
     atime1: 65535
     atime2: 0
     atime3: 0
