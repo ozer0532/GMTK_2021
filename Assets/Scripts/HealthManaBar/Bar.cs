@@ -10,6 +10,7 @@ public class Bar : MonoBehaviour
 	public Gradient gradient; //Mengambil gradien dari unity
     public Image fill; //Mengambil gambar "fill" dari unity
     public int currentBar;  //Besar nilai health 
+    public int startingBar; //Start health
     public int maxBar = 100; //Nilai maksimum health
 
     //Set nilai maksimum pada slider
@@ -37,6 +38,10 @@ public class Bar : MonoBehaviour
             {
             currentBar = 0;
         }
+        else if (currentBar > maxBar)
+        {
+            currentBar = maxBar;
+        }
         slider.value = currentBar; //mengubah slider
         fill.color = gradient.Evaluate(slider.normalizedValue); 
         SetBar(currentBar); //mengubah nilai slider
@@ -46,6 +51,7 @@ public class Bar : MonoBehaviour
     void Start()
     {
         SetMaxBar(100);
+        currentBar = startingBar;
     }
 
     // Update is called once per frame
