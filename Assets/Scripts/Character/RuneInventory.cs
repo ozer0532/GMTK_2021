@@ -72,6 +72,16 @@ public class RuneInventory : MonoBehaviour
         return true;
     }
 
+    //Unequip all after turn
+    public void unequipRune() 
+    {
+        powerRune = null;
+        elementRune1 = null;
+        elementRune2 = null;
+        typeRune = null;
+        UpdateInventory();
+    }
+
     public int CalculateDamage()
     {
         throw new System.NotImplementedException();
