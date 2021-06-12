@@ -15,15 +15,24 @@ public class Battle_Manager : MonoBehaviour
     public Bar manaBar;
     public Bar enemyHealthBar;
     //TODO:Enemy damage
+    public Animator anim;
 
     //Fungsi dipanggil saat button pressed
     public void whenClicked()
     {
         int damage = compareTo();
         enemyHealthBar.reduceBar(-1 * damage);
-        //TODO: Check death
-        //TODO: Damage to player
+        if (enemyHealthBar.currentBar == 0)
+        {
+            anim.Play("Slime_Dead");
+            Debug.Log("Duar musuh mati!");
+        }
+        //TODO: Damage to player sesuai damage enemy
         healthBar.reduceBar(-1 * 10);
+        if (healthBar.currentBar == 0)
+        {
+            Debug.Log("Duar player mati!");
+        }
     }
 
     //Return integer damage 0 no damage, 1 ok damage, 2 full damage with potent rune
