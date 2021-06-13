@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9758ae486c0a53a4b969fdd00067d5e9, type: 3}
+  m_Name: S4E1
+  m_EditorClassIdentifier: 
+  health: 2
+  damage: 5
+  enemyPowerRune: {fileID: 11400000, guid: 9d3ff56a11bdd50498ee497f67280b01, type: 2}
+  enemyElementRune: {fileID: 11400000, guid: 8315de2e7394d7c4e93e74747ddaf8df, type: 2}
+  enemyTypeRune: {fileID: 11400000, guid: 654dbf8feac0e234eb51be91976d92a2, type: 2}
+  enemyPrefab: {fileID: 2762046302179905614, guid: aaa144019564c3146994cf73b41ab9c0, type: 3}
+  weaknessList:
+  - {fileID: 11400000, guid: 7e0d9151c45887c48bc0c1e1dcc6e257, type: 2}
+  - {fileID: 11400000, guid: 6d1c6fc035ef2da43920ded08a6460d0, type: 2}
+  - {fileID: 11400000, guid: f3e771c0e72b6e04285b7abecb2dfd84, type: 2}
+  - {fileID: 11400000, guid: 762bfcd9324edc8489a51fa4f7cdc141, type: 2}
+  - {fileID: 11400000, guid: a3b6ea9bd22fc2c4782d825b49dac5d3, type: 2}
+  - {fileID: 11400000, guid: 4384dd6a16d6acf4082a770b21bb6631, type: 2}
+  - {fileID: 11400000, guid: 16eaf76b33ae79a40ac75fdb1def0709, type: 2}
+  - {fileID: 11400000, guid: 2e8d90a2a99afe54a96b1e9dedbc1572, type: 2}
+  - {fileID: 11400000, guid: 95b35ce9d04ea6f44a15341198fa0bfa, type: 2}
+  - {fileID: 11400000, guid: e336c9ede3ef92f439bf496a4c14ddf0, type: 2}

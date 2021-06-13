@@ -2170,6 +2170,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 36ca62fbb91b3ce4db41c0475aed4735, type: 2}
   - {fileID: 11400000, guid: 3884d268a925d58468eaeaae270b5579, type: 2}
   - {fileID: 11400000, guid: e7ce5e5ead1066f45b29cce7b4ec9c64, type: 2}
+  - {fileID: 11400000, guid: 259261a2c73acc84f8250b4d557fb15c, type: 2}
   enemyData: {fileID: 0}
   runeInvent: {fileID: 1762069235}
   healthBar: {fileID: 791995922}

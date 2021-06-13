@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e90eb78a6c4505342b21edc8e2f232a8, type: 3}
+  m_Name: Slash Earth
+  m_EditorClassIdentifier: 
+  enemyElementRune: {fileID: 11400000, guid: 71d4026e9d1c21f45839cad986286341, type: 2}
+  enemyTypeRune: {fileID: 11400000, guid: 654dbf8feac0e234eb51be91976d92a2, type: 2}
+  prefab: {fileID: 2762046302179905614, guid: aaa144019564c3146994cf73b41ab9c0, type: 3}
