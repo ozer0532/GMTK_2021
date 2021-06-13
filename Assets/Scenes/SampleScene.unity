@@ -1057,6 +1057,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420030}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1072,6 +1073,26 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
+--- !u!114 &519420030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a160d838ff8b4b4693ac20007e008c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AssetsPPU: 108
+  m_RefResolutionX: 1920
+  m_RefResolutionY: 1080
+  m_UpscaleRT: 0
+  m_PixelSnapping: 0
+  m_CropFrameX: 0
+  m_CropFrameY: 1
+  m_StretchFill: 0
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -1541,33 +1562,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1295528986}
-        m_TargetAssemblyTypeName: Bar, Assembly-CSharp
-        m_MethodName: reduceBar
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 10
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1164511528}
         m_TargetAssemblyTypeName: Battle_Manager, Assembly-CSharp
         m_MethodName: whenClicked
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1762069235}
-        m_TargetAssemblyTypeName: RuneInventory, Assembly-CSharp
-        m_MethodName: unequipRune
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3189,6 +3186,14 @@ MonoBehaviour:
   typeRune: {fileID: 0}
   runesList:
   - {fileID: 11400000, guid: 68abc3ba0b56f1b429273f6974c66b76, type: 2}
+  - {fileID: 11400000, guid: 1e0614f74a0957b4f817d6eb6fc0e02e, type: 2}
+  - {fileID: 11400000, guid: 71d4026e9d1c21f45839cad986286341, type: 2}
+  - {fileID: 11400000, guid: 21e77a68cc029384fbe36e6f80d9e531, type: 2}
+  - {fileID: 11400000, guid: b81b9f3e91e14d04b9b106adb6747b6f, type: 2}
+  - {fileID: 11400000, guid: dcaa2dd7ddf81bb49aec9552f2491363, type: 2}
+  - {fileID: 11400000, guid: 654dbf8feac0e234eb51be91976d92a2, type: 2}
+  - {fileID: 11400000, guid: f0abdf8203b793345b530eccc75a99ef, type: 2}
+  - {fileID: 11400000, guid: 9d3ff56a11bdd50498ee497f67280b01, type: 2}
   elementsList:
   - {fileID: 11400000, guid: 71d4026e9d1c21f45839cad986286341, type: 2}
   - {fileID: 11400000, guid: 68abc3ba0b56f1b429273f6974c66b76, type: 2}

@@ -124,4 +124,14 @@ public class RuneInventory : MonoBehaviour
             castButton.interactable = false;
         }
     }
+
+    public GameObject GetAttackAnimPrefab()
+    {
+        if (!GetElementalRune()) return null;
+        if (GetTypeRune())
+        {
+            return Resources.Load($"Attack/{GetElementalRune().runeName}{GetTypeRune().runeName}") as GameObject;
+        }
+        return Resources.Load($"Attack/{GetElementalRune().runeName}Bolt") as GameObject;
+    }
 }

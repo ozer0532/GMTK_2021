@@ -19,6 +19,8 @@ public class Battle_Manager : MonoBehaviour
     int indeksEnemy;
     int indeksWeakness;
 
+    private bool attacking;
+
     private void Start()
     {
         Debug.Log("Total enemy:" + listData.Count);
@@ -39,35 +41,17 @@ public class Battle_Manager : MonoBehaviour
         Destroy(enemyObject);
         enemyObject = Instantiate(enemyData.enemyPrefab);
         anim = enemyObject.GetComponent<Animator>();
-        anim.Play("Slime");
+        anim.Play("Alive");
     }
 
     //Fungsi dipanggil saat button pressed
     public void whenClicked()
     {
-        int damage = compareTo();
-        enemyHealthBar.reduceBar(-1 * damage);
-        if (enemyHealthBar.currentBar == 0)
+        if (!attacking)
         {
-            //Akses elemen enemy selanjutnya
-            if(indeksEnemy != listData.Count-1)
-            {
-                indeksEnemy++;
-                enemyData = listData[indeksEnemy];
-                Invoke(nameof(initStage), 1f);  // Ubah delay mati disini
-            }
-            else
-            {
-                Debug.Log("Menang!!");
-            }
-            anim.Play("Slime_Dead");
-            Debug.Log("Duar musuh mati!");
-        }
-        //TODO: Damage to player sesuai damage enemy
-        healthBar.reduceBar(-1 * enemyData.damage);
-        if (healthBar.currentBar == 0)
-        {
-            Debug.Log("Duar player mati!");
+            attacking = true;
+
+            Instantiate(runeInvent.GetAttackAnimPrefab()).GetComponent<AttackAnimationController>().manager = this;
         }
     }
 
@@ -122,5 +106,38 @@ public class Battle_Manager : MonoBehaviour
         {
             return (0);
         }
+    }
+
+    public void AttackEnd()
+    {
+        manaBar.reduceBar(10);
+
+        int damage = compareTo();
+        enemyHealthBar.reduceBar(-1 * damage);
+        if (enemyHealthBar.currentBar == 0)
+        {
+            //Akses elemen enemy selanjutnya
+            if (indeksEnemy != listData.Count - 1)
+            {
+                indeksEnemy++;
+                enemyData = listData[indeksEnemy];
+                Invoke(nameof(initStage), 1f);  // Ubah delay mati disini
+            }
+            else
+            {
+                Debug.Log("Menang!!");
+            }
+            anim.Play("Dead");
+            Debug.Log("Duar musuh mati!");
+        }
+        //TODO: Damage to player sesuai damage enemy
+        healthBar.reduceBar(-1 * enemyData.damage);
+        if (healthBar.currentBar == 0)
+        {
+            Debug.Log("Duar player mati!");
+        }
+
+        runeInvent.unequipRune();
+        attacking = false;
     }
 }
