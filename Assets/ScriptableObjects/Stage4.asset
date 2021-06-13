@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ef02ad6ea589314da407d45e5aace09, type: 3}
+  m_Name: Stage4
+  m_EditorClassIdentifier: 
+  health: 0
+  damage: 0
+  enemyPowerRune: {fileID: 0}
+  enemyElementRune: {fileID: 0}
+  enemyTypeRune: {fileID: 0}
+  enemyPrefab: {fileID: 0}
+  weaknessList: []
+  availableRunes:
+  - {fileID: 11400000, guid: 68abc3ba0b56f1b429273f6974c66b76, type: 2}
+  - {fileID: 11400000, guid: 1e0614f74a0957b4f817d6eb6fc0e02e, type: 2}
+  - {fileID: 11400000, guid: 71d4026e9d1c21f45839cad986286341, type: 2}
+  - {fileID: 11400000, guid: 21e77a68cc029384fbe36e6f80d9e531, type: 2}
+  - {fileID: 11400000, guid: b81b9f3e91e14d04b9b106adb6747b6f, type: 2}
+  - {fileID: 11400000, guid: dcaa2dd7ddf81bb49aec9552f2491363, type: 2}
+  - {fileID: 11400000, guid: 654dbf8feac0e234eb51be91976d92a2, type: 2}
+  - {fileID: 11400000, guid: f0abdf8203b793345b530eccc75a99ef, type: 2}
+  - {fileID: 11400000, guid: 9d3ff56a11bdd50498ee497f67280b01, type: 2}

@@ -26,12 +26,23 @@ public class Battle_Manager : MonoBehaviour
         Debug.Log("Total enemy:" + listData.Count);
         indeksEnemy = 0;
         enemyData = listData[0];
-        initStage();
+        initRound();
     }
 
-    public void initStage()
+    public void initRound()
     {
         Debug.Log(indeksEnemy + " Masuk sini");
+
+        if (enemyData is NextStageSO)
+        {
+            runeInvent.runesList = ((NextStageSO)enemyData).availableRunes;
+            runeInvent.UpdateInventory();
+            initStage();
+
+            indeksEnemy++;
+            enemyData = listData[indeksEnemy];
+        }
+
         enemyHealthBar.maxBar = enemyData.health;
         enemyHealthBar.currentBar = enemyData.health;
         indeksWeakness = Random.Range(0, enemyData.weaknessList.Count);
@@ -42,6 +53,12 @@ public class Battle_Manager : MonoBehaviour
         enemyObject = Instantiate(enemyData.enemyPrefab);
         anim = enemyObject.GetComponent<Animator>();
         anim.Play("Alive");
+    }
+
+    public void initStage()
+    {
+        healthBar.currentBar = healthBar.maxBar;    // Full heal
+        manaBar.currentBar = manaBar.maxBar;
     }
 
     //Fungsi dipanggil saat button pressed
@@ -129,7 +146,7 @@ public class Battle_Manager : MonoBehaviour
             {
                 indeksEnemy++;
                 enemyData = listData[indeksEnemy];
-                Invoke(nameof(initStage), 1f);  // Ubah delay mati disini
+                Invoke(nameof(initRound), 1f);  // Ubah delay mati disini
             }
             else
             {

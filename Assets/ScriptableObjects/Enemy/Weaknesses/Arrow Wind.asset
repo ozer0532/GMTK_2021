@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e90eb78a6c4505342b21edc8e2f232a8, type: 3}
-  m_Name: Arrow Lightning
+  m_Name: Arrow Wind
   m_EditorClassIdentifier: 
-  enemyElementRune: {fileID: 11400000, guid: e658013c80f0c3648a16fb731133fc92, type: 2}
+  enemyElementRune: {fileID: 11400000, guid: 8315de2e7394d7c4e93e74747ddaf8df, type: 2}
   enemyTypeRune: {fileID: 11400000, guid: b81b9f3e91e14d04b9b106adb6747b6f, type: 2}
