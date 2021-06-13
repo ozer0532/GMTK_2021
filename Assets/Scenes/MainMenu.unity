@@ -682,7 +682,7 @@ PrefabInstance:
     - target: {fileID: 9193415547581252991, guid: 68bde9a6c14652946a356e65d00ea76c, type: 3}
       propertyPath: sceneMusic
       value: 
-      objectReference: {fileID: 8300000, guid: 14fafbc39de333846adc725cf1ab0107, type: 3}
+      objectReference: {fileID: 8300000, guid: 1b55883fc95417547b7c4237f4d44e8e, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68bde9a6c14652946a356e65d00ea76c, type: 3}
 --- !u!1 &1770765377
