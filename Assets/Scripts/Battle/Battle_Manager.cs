@@ -86,6 +86,18 @@ public class Battle_Manager : MonoBehaviour
         ElementalRuneSO currentPlayerElement = runeInvent.GetElementalRune();
         if (currentPlayerElement != null)
         {
+            //Change player mana
+            //Mana if dull minus 5, if potent minus 20
+            //Note: reduce bar negatif
+            if (runeInvent.GetPowerRune() != null)
+            {
+                manaBar.reduceBar(-1 * runeInvent.GetPowerRune().manaCost);
+            }
+            else
+            {
+                manaBar.reduceBar(-15);
+            }
+
             //Debug.Log("Weakness:" + enemyData.enemyTypeRune + enemyData.enemyElementRune);
 
             //Hit
@@ -114,6 +126,11 @@ public class Battle_Manager : MonoBehaviour
                 return (0);
             }
 
+            
+        }
+        //Kombinasi elemen salah
+        else
+        {
             //Change player mana
             //Mana if dull minus 5, if potent minus 20
             //Note: reduce bar negatif
@@ -125,10 +142,6 @@ public class Battle_Manager : MonoBehaviour
             {
                 manaBar.reduceBar(-15);
             }
-        }
-        //Kombinasi elemen salah
-        else
-        {
             return (0);
         }
     }
