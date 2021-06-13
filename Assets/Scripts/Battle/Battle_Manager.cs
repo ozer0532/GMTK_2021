@@ -28,6 +28,7 @@ public class Battle_Manager : MonoBehaviour
     public UnityEvent onHit;
 
     private bool attacking;
+    private bool manaEnough=true;
 
     private void Start()
     {
@@ -100,7 +101,24 @@ public class Battle_Manager : MonoBehaviour
 
             onCast.Invoke();
 
-            Instantiate(runeInvent.GetAttackAnimPrefab()).GetComponent<AttackAnimationController>().manager = this;
+            manaEnough = true;
+            if (runeInvent.GetPowerRune() != null)
+            {
+                if (manaBar.currentBar < (runeInvent.GetPowerRune().manaCost)) manaEnough = false;
+            }
+            else
+            {
+                if (manaBar.currentBar < 15) manaEnough = false;
+            }
+
+            if (manaEnough)
+            {
+                Instantiate(runeInvent.GetAttackAnimPrefab()).GetComponent<AttackAnimationController>().manager = this;
+            }
+            else
+            {
+                AttackEnd();
+            }
         }
     }
 
@@ -114,15 +132,21 @@ public class Battle_Manager : MonoBehaviour
             //Change player mana
             //Mana if dull minus 5, if potent minus 20
             //Note: reduce bar negatif
-            if (runeInvent.GetPowerRune() != null)
+            if (!manaEnough)
             {
-                manaBar.reduceBar(-1 * runeInvent.GetPowerRune().manaCost);
+                return 0;
             }
             else
             {
-                manaBar.reduceBar(-15);
+                if (runeInvent.GetPowerRune() != null)
+                {
+                    manaBar.reduceBar(-1 * runeInvent.GetPowerRune().manaCost);
+                }
+                else
+                {
+                    manaBar.reduceBar(-15);
+                }
             }
-
             //Debug.Log("Weakness:" + enemyData.enemyTypeRune + enemyData.enemyElementRune);
 
             //Hit
@@ -159,13 +183,20 @@ public class Battle_Manager : MonoBehaviour
             //Change player mana
             //Mana if dull minus 5, if potent minus 20
             //Note: reduce bar negatif
-            if (runeInvent.GetPowerRune() != null)
+            if (!manaEnough)
             {
-                manaBar.reduceBar(-1 * runeInvent.GetPowerRune().manaCost);
+                return 0;
             }
             else
             {
-                manaBar.reduceBar(-15);
+                if (runeInvent.GetPowerRune() != null)
+                {
+                    manaBar.reduceBar(-1 * runeInvent.GetPowerRune().manaCost);
+                }
+                else
+                {
+                    manaBar.reduceBar(-15);
+                }
             }
             return (0);
         }
