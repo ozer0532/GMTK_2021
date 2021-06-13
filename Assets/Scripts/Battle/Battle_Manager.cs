@@ -114,6 +114,14 @@ public class Battle_Manager : MonoBehaviour
 
         int damage = compareTo();
         enemyHealthBar.reduceBar(-1 * damage);
+        if (damage > 0)
+        {
+            anim.Play("Hit");
+        }
+        else
+        {
+            anim.Play("Block");
+        }
         if (enemyHealthBar.currentBar == 0)
         {
             //Akses elemen enemy selanjutnya

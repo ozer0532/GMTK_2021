@@ -6,10 +6,10 @@ AnimatorOverrideController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Fire_Slime
+  m_Name: Wind_Slime
   m_Controller: {fileID: 9100000, guid: 209f9a7d52c3b8746a43b52c5d365881, type: 2}
   m_Clips:
   - m_OriginalClip: {fileID: 7400000, guid: 8172f41ce7cdf4b47be41c2259d0b202, type: 2}
-    m_OverrideClip: {fileID: 7400000, guid: 9f1d135bd073e664ba76ee07147370eb, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 07a5a2198ddd1754db4062a56a8dd9cf, type: 2}
   - m_OriginalClip: {fileID: 7400000, guid: ddfc9a9ede6e85f41bd2a1bafda30142, type: 2}
-    m_OverrideClip: {fileID: 7400000, guid: 9367f21496dcdd44bb895d4f678e953c, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: f1287df1740681e4c9713763fff17d3b, type: 2}

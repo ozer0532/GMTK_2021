@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2762046302179905713}
   - component: {fileID: -8876925733506254915}
   m_Layer: 0
-  m_Name: PlantSlime
+  m_Name: EarthSlime
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4d6c390e4cf57234f94d4864d1c0fb4f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3989b7d3ac56e604c962a4f5a857a46d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -95,7 +95,7 @@ Animator:
   m_GameObject: {fileID: 2762046302179905614}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 209f9a7d52c3b8746a43b52c5d365881, type: 2}
+  m_Controller: {fileID: 22100000, guid: 4fcda879c0c600a439697c4cb1b43e38, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

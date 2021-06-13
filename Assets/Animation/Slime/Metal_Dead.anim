@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Fire_Dead
+  m_Name: Metal_Dead
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -144,7 +144,7 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: beeab3d97c3379644b6768b44ddcdb01, type: 3}
+      value: {fileID: 21300000, guid: a9a90e494c73957408a22568b625236d, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -171,7 +171,7 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 21300000, guid: beeab3d97c3379644b6768b44ddcdb01, type: 3}
+    - {fileID: 21300000, guid: a9a90e494c73957408a22568b625236d, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
