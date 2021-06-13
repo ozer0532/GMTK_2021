@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runeName: Hydro
   sprite: {fileID: 21300000, guid: 146b623700e5b88438aa7a820de6151c, type: 3}
+  color: {r: 0.40784314, g: 0.7019608, b: 0.9137255, a: 1}
   isBaseElement: 1
   baseElement1: {fileID: 0}
   baseElement2: {fileID: 0}

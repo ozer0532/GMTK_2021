@@ -117,3 +117,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 0}
+  hitClip: {fileID: 8300000, guid: 2098439b7541e604e8aa5bf678798363, type: 3}

@@ -6,4 +6,5 @@ public class RuneBaseSO : ScriptableObject
 {
     public string runeName;
     public Sprite sprite;
+    public Color color;
 }

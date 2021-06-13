@@ -8,6 +8,7 @@ public class RuneEquipmentDisplay : MonoBehaviour, IPointerClickHandler
 {
     public DisplaySlot slot;
     public RuneInventory inventory;
+    public AudioClip clip;
 
     private Image image;
     private RuneBaseSO rune;
@@ -59,6 +60,7 @@ public class RuneEquipmentDisplay : MonoBehaviour, IPointerClickHandler
     public void OnPointerClick(PointerEventData eventData)
     {
         rune = null;
+        Zro.Audio.GameAudioPlayer.PlayOneShot(clip);
 
         switch (slot)
         {

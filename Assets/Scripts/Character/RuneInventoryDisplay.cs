@@ -8,6 +8,8 @@ public class RuneInventoryDisplay : MonoBehaviour, IPointerClickHandler
 {
     public int inventoryIndex;
     public RuneInventory inventory;
+    public AudioClip clip;
+    public Image colorImage;
 
     private Image image;
     private RuneBaseSO rune;
@@ -34,15 +36,19 @@ public class RuneInventoryDisplay : MonoBehaviour, IPointerClickHandler
         {
             image.enabled = true;
             image.sprite = rune.sprite;
+
+            colorImage.color = rune.color;
         }
         else
         {
             image.enabled = false;
+            colorImage.color = new Color(0, 0, 0, 0);
         }
     }
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        if (inventory) print(inventory.EquipRune(rune));
+        Zro.Audio.GameAudioPlayer.PlayOneShot(clip);
+        if (inventory) inventory.EquipRune(rune);
     }
 }

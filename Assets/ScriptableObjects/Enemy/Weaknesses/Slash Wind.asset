@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyElementRune: {fileID: 11400000, guid: 8315de2e7394d7c4e93e74747ddaf8df, type: 2}
   enemyTypeRune: {fileID: 11400000, guid: 654dbf8feac0e234eb51be91976d92a2, type: 2}
-  prefab: {fileID: 2762046302179905614, guid: db862190c1a5dc640a083385dd4b4fb4, type: 3}
+  prefab: {fileID: 2762046302179905614, guid: 1291dae32f600db4c882c9670f54fb3b, type: 3}

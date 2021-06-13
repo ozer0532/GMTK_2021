@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runeName: Geo
   sprite: {fileID: 21300000, guid: 70229cad6a4cbdd40bd497e742bdf48d, type: 3}
+  color: {r: 0.8509804, g: 0.5882353, b: 0.33333334, a: 1}
   isBaseElement: 1
   baseElement1: {fileID: 0}
   baseElement2: {fileID: 0}

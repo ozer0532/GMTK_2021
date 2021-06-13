@@ -21,6 +21,8 @@ public class Battle_Manager : MonoBehaviour
     int indeksWeakness;
 
     //Cast Button
+    public GameObject winScreen;
+    public GameObject loseScreen;
     public UnityEngine.UI.Button castButton;
     public UnityEvent onCast;
     public UnityEvent onHit;
@@ -195,6 +197,7 @@ public class Battle_Manager : MonoBehaviour
             else
             {
                 Debug.Log("Menang!!");
+                winScreen.SetActive(true);
             }
             anim.Play("Dead");
             Debug.Log("Duar musuh mati!");
@@ -212,6 +215,7 @@ public class Battle_Manager : MonoBehaviour
         if (healthBar.currentBar == 0)
         {
             Debug.Log("Duar player mati!");
+            loseScreen.SetActive(true);
         }
 
         runeInvent.unequipRune();
