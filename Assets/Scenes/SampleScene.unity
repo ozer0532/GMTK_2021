@@ -2177,6 +2177,37 @@ MonoBehaviour:
   enemyHealthBar: {fileID: 1612338993}
   enemyObject: {fileID: 0}
   anim: {fileID: 0}
+  castButton: {fileID: 775257306}
+  onCast:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 779555133}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Player Cast
+          m_BoolArgument: 0
+        m_CallState: 2
+  onHit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 779555133}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Player Hit
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1208441965
 GameObject:
   m_ObjectHideFlags: 0
@@ -3388,7 +3419,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1e0614f74a0957b4f817d6eb6fc0e02e, type: 2}
   - {fileID: 11400000, guid: 21e77a68cc029384fbe36e6f80d9e531, type: 2}
   - {fileID: 11400000, guid: 8315de2e7394d7c4e93e74747ddaf8df, type: 2}
-  castButton: {fileID: 775257306}
 --- !u!1 &1782683667
 GameObject:
   m_ObjectHideFlags: 0

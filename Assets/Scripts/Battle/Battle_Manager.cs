@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Battle_Manager : MonoBehaviour
 {
@@ -19,6 +20,11 @@ public class Battle_Manager : MonoBehaviour
     int indeksEnemy;
     int indeksWeakness;
 
+    //Cast Button
+    public UnityEngine.UI.Button castButton;
+    public UnityEvent onCast;
+    public UnityEvent onHit;
+
     private bool attacking;
 
     private void Start()
@@ -27,6 +33,18 @@ public class Battle_Manager : MonoBehaviour
         indeksEnemy = 0;
         enemyData = listData[0];
         initRound();
+    }
+
+    private void Update()
+    {
+        if (runeInvent.GetElementalRune() != null && !attacking)
+        {
+            castButton.interactable = true;
+        }
+        else
+        {
+            castButton.interactable = false;
+        }
     }
 
     public void initRound()
@@ -52,6 +70,9 @@ public class Battle_Manager : MonoBehaviour
 
         if (currentWeakness.prefab) changeEnemyPrefab(currentWeakness.prefab);
         else changeEnemyPrefab(enemyData.enemyPrefab);
+
+        runeInvent.unequipRune();
+        attacking = false;
     }
 
     public void changeEnemyPrefab(GameObject prefab)
@@ -74,6 +95,8 @@ public class Battle_Manager : MonoBehaviour
         if (!attacking)
         {
             attacking = true;
+
+            onCast.Invoke();
 
             Instantiate(runeInvent.GetAttackAnimPrefab()).GetComponent<AttackAnimationController>().manager = this;
         }
@@ -163,8 +186,16 @@ public class Battle_Manager : MonoBehaviour
             anim.Play("Dead");
             Debug.Log("Duar musuh mati!");
         }
-        //TODO: Damage to player sesuai damage enemy
+        else
+        {
+            Invoke(nameof(EnemyAttack), 1f);
+        }
+    }
+
+    private void EnemyAttack()
+    {
         healthBar.reduceBar(-1 * enemyData.damage);
+        onHit.Invoke();
         if (healthBar.currentBar == 0)
         {
             Debug.Log("Duar player mati!");
