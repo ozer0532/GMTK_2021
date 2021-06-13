@@ -99,18 +99,6 @@ public class Battle_Manager : MonoBehaviour
                 Debug.Log("Ganti weakness menjadi" + enemyData.enemyTypeRune + enemyData.enemyElementRune);
                 if (currentWeakness.prefab) changeEnemyPrefab(currentWeakness.prefab);
 
-                //Change player mana
-                //Mana if dull minus 5, if potent minus 20
-                //Note: reduce bar negatif
-                if (runeInvent.GetPowerRune() != null)
-                {
-                    manaBar.reduceBar(-1 * runeInvent.GetPowerRune().manaCost);
-                }
-                else 
-                {
-                    manaBar.reduceBar(-15);
-                }
-
                 //Formula damage
                 if (runeInvent.powerRune == enemyData.enemyPowerRune)
                 {
@@ -124,6 +112,18 @@ public class Battle_Manager : MonoBehaviour
             else
             {
                 return (0);
+            }
+
+            //Change player mana
+            //Mana if dull minus 5, if potent minus 20
+            //Note: reduce bar negatif
+            if (runeInvent.GetPowerRune() != null)
+            {
+                manaBar.reduceBar(-1 * runeInvent.GetPowerRune().manaCost);
+            }
+            else
+            {
+                manaBar.reduceBar(-15);
             }
         }
         //Kombinasi elemen salah
