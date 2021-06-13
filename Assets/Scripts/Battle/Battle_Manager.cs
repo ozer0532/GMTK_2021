@@ -14,6 +14,7 @@ public class Battle_Manager : MonoBehaviour
     public Bar manaBar;
     public Bar enemyHealthBar;
     //TODO:Enemy damage
+    public GameObject enemyObject;
     public Animator anim;
     int indeksEnemy;
     int indeksWeakness;
@@ -35,6 +36,9 @@ public class Battle_Manager : MonoBehaviour
         EnemyWeakness currentWeakness = enemyData.weaknessList[indeksWeakness];
         enemyData.enemyTypeRune = currentWeakness.enemyTypeRune;
         enemyData.enemyElementRune = currentWeakness.enemyElementRune;
+        Destroy(enemyObject);
+        enemyObject = Instantiate(enemyData.enemyPrefab);
+        anim = enemyObject.GetComponent<Animator>();
         anim.Play("Slime");
     }
 
@@ -50,7 +54,7 @@ public class Battle_Manager : MonoBehaviour
             {
                 indeksEnemy++;
                 enemyData = listData[indeksEnemy];
-                initStage();
+                Invoke(nameof(initStage), 1f);  // Ubah delay mati disini
             }
             else
             {

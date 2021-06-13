@@ -10,6 +10,7 @@ public class EnemyDataSO : ScriptableObject
     public PowerRuneSO enemyPowerRune;
     public ElementalRuneSO enemyElementRune;
     public TypeRuneSO enemyTypeRune;
+    public GameObject enemyPrefab;
     //List of weakness
     public List<EnemyWeakness> weaknessList;
 }
