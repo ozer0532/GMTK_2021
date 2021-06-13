@@ -12,6 +12,7 @@ namespace Zro.Audio
         public List<OneShotMixerInfo> oneShotMixers = new List<OneShotMixerInfo>();
         public int musicMixerIndex;
         public List<MusicMixerInfo> musicMixers = new List<MusicMixerInfo>();
+        public AudioClip sceneMusic;
 
         public static GameAudioPlayer main;
 
@@ -49,6 +50,8 @@ namespace Zro.Audio
                 main = this;
                 DontDestroyOnLoad(gameObject);
             }
+
+            if (sceneMusic) PlayMusic(sceneMusic);
         }
 
         private void OnDisable()
