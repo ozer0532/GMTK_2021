@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9758ae486c0a53a4b969fdd00067d5e9, type: 3}
+  m_Name: S3E1
+  m_EditorClassIdentifier: 
+  health: 2
+  damage: 10
+  enemyPowerRune: {fileID: 11400000, guid: 9d3ff56a11bdd50498ee497f67280b01, type: 2}
+  enemyElementRune: {fileID: 11400000, guid: 68abc3ba0b56f1b429273f6974c66b76, type: 2}
+  enemyTypeRune: {fileID: 0}
+  enemyPrefab: {fileID: 2762046302179905614, guid: 2458f7d785d9f8042b4c3a1c290a80bb, type: 3}
+  weaknessList:
+  - {fileID: 11400000, guid: a3b6ea9bd22fc2c4782d825b49dac5d3, type: 2}
+  - {fileID: 11400000, guid: 4384dd6a16d6acf4082a770b21bb6631, type: 2}

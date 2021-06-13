@@ -49,8 +49,15 @@ public class Battle_Manager : MonoBehaviour
         EnemyWeakness currentWeakness = enemyData.weaknessList[indeksWeakness];
         enemyData.enemyTypeRune = currentWeakness.enemyTypeRune;
         enemyData.enemyElementRune = currentWeakness.enemyElementRune;
+
+        if (currentWeakness.prefab) changeEnemyPrefab(currentWeakness.prefab);
+        else changeEnemyPrefab(enemyData.enemyPrefab);
+    }
+
+    public void changeEnemyPrefab(GameObject prefab)
+    {
         Destroy(enemyObject);
-        enemyObject = Instantiate(enemyData.enemyPrefab);
+        enemyObject = Instantiate(prefab);
         anim = enemyObject.GetComponent<Animator>();
         anim.Play("Alive");
     }
@@ -90,6 +97,7 @@ public class Battle_Manager : MonoBehaviour
                 enemyData.enemyTypeRune = currentWeakness.enemyTypeRune;
                 enemyData.enemyElementRune = currentWeakness.enemyElementRune;
                 Debug.Log("Ganti weakness menjadi" + enemyData.enemyTypeRune + enemyData.enemyElementRune);
+                if (currentWeakness.prefab) changeEnemyPrefab(currentWeakness.prefab);
 
                 //Change player mana
                 //Mana if dull minus 5, if potent minus 20

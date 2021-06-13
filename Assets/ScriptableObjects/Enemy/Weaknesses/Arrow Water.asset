@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e90eb78a6c4505342b21edc8e2f232a8, type: 3}
-  m_Name: None Fire
+  m_Name: Arrow Water
   m_EditorClassIdentifier: 
-  enemyElementRune: {fileID: 11400000, guid: 68abc3ba0b56f1b429273f6974c66b76, type: 2}
-  enemyTypeRune: {fileID: 0}
-  prefab: {fileID: 2762046302179905614, guid: 2458f7d785d9f8042b4c3a1c290a80bb, type: 3}
+  enemyElementRune: {fileID: 11400000, guid: 21e77a68cc029384fbe36e6f80d9e531, type: 2}
+  enemyTypeRune: {fileID: 11400000, guid: b81b9f3e91e14d04b9b106adb6747b6f, type: 2}
+  prefab: {fileID: 2762046302179905614, guid: a0d07495ced9d62499e342b1bf20203f, type: 3}

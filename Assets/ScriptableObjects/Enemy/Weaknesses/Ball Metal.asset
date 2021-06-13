@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e90eb78a6c4505342b21edc8e2f232a8, type: 3}
-  m_Name: None Fire
+  m_Name: Ball Metal
   m_EditorClassIdentifier: 
-  enemyElementRune: {fileID: 11400000, guid: 68abc3ba0b56f1b429273f6974c66b76, type: 2}
-  enemyTypeRune: {fileID: 0}
-  prefab: {fileID: 2762046302179905614, guid: 2458f7d785d9f8042b4c3a1c290a80bb, type: 3}
+  enemyElementRune: {fileID: 11400000, guid: 45091e83af25eff4f9b231b5d21e38e2, type: 2}
+  enemyTypeRune: {fileID: 11400000, guid: dcaa2dd7ddf81bb49aec9552f2491363, type: 2}
+  prefab: {fileID: 2762046302179905614, guid: db862190c1a5dc640a083385dd4b4fb4, type: 3}

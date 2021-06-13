@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9758ae486c0a53a4b969fdd00067d5e9, type: 3}
-  m_Name: S2E2
+  m_Name: S3E2
   m_EditorClassIdentifier: 
   health: 2
   damage: 10
@@ -19,5 +19,5 @@ MonoBehaviour:
   enemyTypeRune: {fileID: 0}
   enemyPrefab: {fileID: 2762046302179905614, guid: 2458f7d785d9f8042b4c3a1c290a80bb, type: 3}
   weaknessList:
-  - {fileID: 11400000, guid: 6d1c6fc035ef2da43920ded08a6460d0, type: 2}
-  - {fileID: 11400000, guid: 762bfcd9324edc8489a51fa4f7cdc141, type: 2}
+  - {fileID: 11400000, guid: 7e0d9151c45887c48bc0c1e1dcc6e257, type: 2}
+  - {fileID: 11400000, guid: f3e771c0e72b6e04285b7abecb2dfd84, type: 2}

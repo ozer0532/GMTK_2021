@@ -2165,6 +2165,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: dfa612c0ad1b3334db13bb1c9606b290, type: 2}
   - {fileID: 11400000, guid: 17426def166249b4bb2c298875848df8, type: 2}
   - {fileID: 11400000, guid: 1741ebf90052c814db97c3abdae802a8, type: 2}
+  - {fileID: 11400000, guid: 14c167846fc7ed74cae935aa4504a725, type: 2}
+  - {fileID: 11400000, guid: 20e860b8cf841e1409e8dfc247f425be, type: 2}
+  - {fileID: 11400000, guid: 36ca62fbb91b3ce4db41c0475aed4735, type: 2}
+  - {fileID: 11400000, guid: 3884d268a925d58468eaeaae270b5579, type: 2}
+  - {fileID: 11400000, guid: e7ce5e5ead1066f45b29cce7b4ec9c64, type: 2}
   enemyData: {fileID: 0}
   runeInvent: {fileID: 1762069235}
   healthBar: {fileID: 791995922}
