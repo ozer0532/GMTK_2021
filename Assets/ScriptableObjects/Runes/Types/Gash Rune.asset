@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runeName: Gash
   sprite: {fileID: 21300000, guid: 566fb38b19bbdef47abb35146a3bd4e5, type: 3}
+  color: {r: 0.20425417, g: 0.8490566, b: 0.84267515, a: 1}

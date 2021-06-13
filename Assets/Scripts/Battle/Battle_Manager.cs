@@ -26,6 +26,7 @@ public class Battle_Manager : MonoBehaviour
     public UnityEngine.UI.Button castButton;
     public UnityEvent onCast;
     public UnityEvent onHit;
+    public UnityEvent onHeal;
 
     private bool attacking;
     private bool manaEnough=true;
@@ -88,6 +89,7 @@ public class Battle_Manager : MonoBehaviour
 
     public void initStage()
     {
+        onHeal.Invoke();
         healthBar.currentBar = healthBar.maxBar;    // Full heal
         manaBar.currentBar = manaBar.maxBar;
     }
